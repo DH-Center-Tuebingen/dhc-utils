@@ -8,5 +8,6 @@
         "target": "esnext",
         "allowImportingTsExtensions": true,
       },
-      "include": ["src"],
+      "include": ["src/**/*.ts"],
+      "exclude": ["src/**/*.test.ts", "src/**/*.spec.ts"],
 }

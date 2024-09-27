@@ -11,7 +11,10 @@ const name = packageJson.name
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
-        dts({ rollupTypes: true }),
+        dts({ 
+            rollupTypes: true,
+            tsconfigPath: path.resolve(__dirname, './tsconfig.build.json'),
+        }),
     ],
     build: {
         minify: false,
