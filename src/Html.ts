@@ -1,4 +1,4 @@
-import type { User } from "./types/User.ts";
+import type { User } from "./types/Types.ts";
 
 /**
  * WIP
@@ -32,6 +32,6 @@ export function mentionify(
             }
             value = value.replace(replRegex, tpl.replace("{name}", name));
         }
-    }
+    } 
     return value;
 }

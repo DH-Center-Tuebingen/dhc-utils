@@ -1,6 +1,6 @@
 import { expect } from "@std/expect";
 import { User } from "./types/User.ts"
-import { can } from "./User.ts"
+import { can } from "./UserUtils.ts"
 
 const Luke: User = {
     id: 1,

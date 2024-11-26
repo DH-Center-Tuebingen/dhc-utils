@@ -1,5 +1,5 @@
 import { expect } from "@std/expect";
-import { ago, datestring } from "./Time.ts";
+import { ago, datestring } from "./TimeUtils.ts";
 
 const resetOptions: Intl.DateTimeFormatOptions = {
     timeZone: "UTC",

@@ -18,7 +18,7 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "npm run test"
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
@@ -37,7 +37,10 @@
     "url": "https://github.com/DH-Center-Tuebingen/dhc-utils/issues"
   },
   "homepage": "https://github.com/DH-Center-Tuebingen/dhc-utils#readme",
-  "dependencies": { "dayjs": "^1.11.13", "vite-dts": "^1.0.4" },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "vite-dts": "^1.0.4"
+  },
   "devDependencies": {
     "typescript": "^5.6.2",
     "vite": "^5.4.8",

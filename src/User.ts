@@ -1,5 +1,4 @@
-import type { User } from "./types/User.ts";
-
+import type { User } from "dhc-types/User";
 
 /**
  * Creates a function that checks if the user has the given permission.
@@ -9,7 +8,7 @@ import type { User } from "./types/User.ts";
  */
 function checkPermissionOf(user: User): (permission: string) => boolean {
     return (permission) => {
-        return user.permissions[permission] === true;
+        return (user.permissions ?? []).indexOf(permission) != -1;
     }
 }
 
