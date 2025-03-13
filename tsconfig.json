@@ -6,8 +6,8 @@
         "sourceMap": true,
         "strict": true,
         "target": "esnext",
-        "allowImportingTsExtensions": true,
         "typeRoots": ["types"],
       },
       "include": ["src"],
+      "exclude": ["node_modules"]
 }

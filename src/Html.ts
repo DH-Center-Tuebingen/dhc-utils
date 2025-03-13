@@ -1,4 +1,5 @@
-import type { User } from "./types/Types.ts";
+
+import type { User } from "dhc-types";
 
 /**
  * WIP
@@ -32,6 +33,6 @@ export function mentionify(
             }
             value = value.replace(replRegex, tpl.replace("{name}", name));
         }
-    } 
+    }
     return value;
 }

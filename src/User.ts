@@ -1,4 +1,4 @@
-import type { User } from "dhc-types/User";
+import type { User } from "dhc-types";
 
 /**
  * Creates a function that checks if the user has the given permission.

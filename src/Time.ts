@@ -1,9 +1,8 @@
-import { TimeInput } from "./types/Time.ts";
 import dayjs from "./vendor/dayjs.ts";
 
 const invalidString = ""
 
-function toDate(value: TimeInput): Date {
+function toDate(value: number): Date {
     if (!isNaN(+value)) {
         value = (+value) * 1000;
     }
@@ -17,7 +16,7 @@ function toDate(value: TimeInput): Date {
  * @param value  - Unix timestamp or date string
  * @returns 
  */
-export function ago(from: TimeInput, to: TimeInput | null = null): string {
+export function ago(from: number, to: number | null = null): string {
     if (!from) return "-";
     if (!to) to = Date.now() / 1000;
     const toDateObject = toDate(to);
@@ -47,7 +46,7 @@ function localeFallback(locale?: string): string {
  * @returns
  */
 export function datestring(
-    value: TimeInput,
+    value: number,
     locale?: string,
     localeOptions?: Intl.DateTimeFormatOptions,
 ): string {
@@ -81,7 +80,7 @@ function formatDateFromDateObject(
  * @returns 
  */
 export function formatDate(
-    value: TimeInput,
+    value: number,
     locale?: string,
     localeOptions?: Intl.DateTimeFormatOptions
 ): string {

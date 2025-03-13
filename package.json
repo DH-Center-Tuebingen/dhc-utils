@@ -2,7 +2,7 @@
   "name": "dhc-utils",
   "version": "0.1.0",
   "description": "A library of utility functions used inside the DHC projects.",
-  "main": "index.js",
+  "main": "exports.ts",
   "type": "module",
   "exports": {
     ".": {
@@ -14,11 +14,16 @@
         "default": "./dist/dhc-utils.umd.js",
         "types": "./dist/index.d.ts"
       }
+    },
+    "./string": {
+      "import": "./dist/string.es.js",
+      "require": "./dist/string.umd.js"
     }
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "postinstall": "node ./scripts/link-modules.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +47,7 @@
     "vite-dts": "^1.0.4"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.48.0",
     "typescript": "^5.6.2",
     "vite": "^5.4.8",
     "vite-plugin-dts": "^4.2.2"
