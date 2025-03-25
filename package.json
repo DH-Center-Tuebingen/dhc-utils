@@ -23,7 +23,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vite build",
-    "postinstall": "node ./scripts/link-modules.js"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
