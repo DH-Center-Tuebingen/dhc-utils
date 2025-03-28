@@ -13,6 +13,7 @@ export default defineConfig({
         dts({ 
             rollupTypes: true,
             tsconfigPath: path.resolve(__dirname, './tsconfig.build.json'),
+            include: ["src/**/*.ts"],
         }),
     ],
     resolve: {
@@ -27,14 +28,14 @@ export default defineConfig({
         sourcemap: true,
         lib: {
             entry: {
-                index: path.resolve(__dirname, './src/exports.ts'),
-                string: path.resolve(__dirname, './src/string/index.ts')
+                index: path.resolve(__dirname, './src/index.ts'),
             },
+            formats: ['es'], // Only export ES files
             name,
-            fileName: (format) => `${name}.${format}.js`
+            fileName: (format, entryName) => `${entryName}.js` // Simplify file naming
         },
         rollupOptions: {
-            external: (id) => id.endsWith('.test.ts'),
+            external: (id) => id.endsWith('.test.ts') || id.endsWith('.spec.ts'), // Ensure test files are excluded
         },
     }
 });

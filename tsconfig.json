@@ -2,12 +2,13 @@
     "compilerOptions": {
         "declaration": true,
         "esModuleInterop": true,
-        "moduleResolution": "node",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
         "sourceMap": true,
         "strict": true,
         "target": "esnext",
-        "typeRoots": ["types"],
-      },
-      "include": ["src"],
-      "exclude": ["node_modules"]
+        "typeRoots": ["types"]
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist"]
 }

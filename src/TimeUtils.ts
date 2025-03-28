@@ -1,4 +1,4 @@
-import dayjs from "./vendor/dayjs.ts";
+import dayjs from "./vendor/dayjs.js";
 
 const invalidString = ""
 
