@@ -4,11 +4,17 @@
   "description": "A library of utility functions used inside the DHC projects.",
   "main": "exports.ts",
   "type": "module",
-  "exports": {},
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vite build",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "watch": "vite build --watch"
   },
   "repository": {
     "type": "git",

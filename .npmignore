@@ -1,1 +1,3 @@
 # Just ensures the dist files are prepared properly.
+
+*.ipynb
